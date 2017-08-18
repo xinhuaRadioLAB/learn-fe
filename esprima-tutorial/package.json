@@ -6,6 +6,7 @@
   "author": "SuperMoo",
   "license": "MIT",
   "dependencies": {
-    "esprima": "^4.0.0"
+    "esprima": "^4.0.0",
+    "estraverse": "^4.2.0"
   }
 }
