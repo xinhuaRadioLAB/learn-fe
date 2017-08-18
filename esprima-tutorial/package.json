@@ -1,0 +1,11 @@
+{
+  "name": "learn-ast",
+  "version": "0.1.0",
+  "description": "http://www.iteye.com/news/30731",
+  "main": "index.js",
+  "author": "SuperMoo",
+  "license": "MIT",
+  "dependencies": {
+    "esprima": "^4.0.0"
+  }
+}
