@@ -14,19 +14,19 @@ function analyzeCode(code) {
     };
 
     // 3 遍历AST
-    estraverse.traverse(ast, {
-        enter: function (node) {
-            if (node.type === 'FunctionDeclaration') {
-                addStatsEntry(node.id.name); //4 如果发现了函数声明，增加一次函数声明 
-                functionsStats[node.id.name].declarations++;
-            } else if (node.type === 'CallExpression' && node.callee.type === 'Identifier') {
-                addStatsEntry(node.callee.name);
-                functionsStats[node.callee.name].calls++; //5 如果发现了函数调用，增加一次函数调用
-            }
-        }
-    });
+    // estraverse.traverse(ast, {
+    //     enter: function (node) {
+    //         if (node.type === 'FunctionDeclaration') {
+    //             addStatsEntry(node.id.name); //4 如果发现了函数声明，增加一次函数声明 
+    //             functionsStats[node.id.name].declarations++;
+    //         } else if (node.type === 'CallExpression' && node.callee.type === 'Identifier') {
+    //             addStatsEntry(node.callee.name);
+    //             functionsStats[node.callee.name].calls++; //5 如果发现了函数调用，增加一次函数调用
+    //         }
+    //     }
+    // });
 
-    processResults(functionsStats);
+    // processResults(functionsStats);
 
     console.log('====================================');
     console.log(JSON.stringify(ast, null, '  '));
